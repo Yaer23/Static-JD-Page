@@ -4,7 +4,7 @@
 
 ## 在线演示
 
-![仿京东首页-效果预览](https://yaer23.github.io/Static-JD-Page/src/index.html)
+[仿京东首页-效果预览](https://yaer23.github.io/Static-JD-Page/src/index.html)
 
 ## 项目介绍
 
@@ -114,11 +114,11 @@ $(function () {
 
 ### tab选项卡
 
-[tab选项卡](http://oofwms1or.bkt.clouddn.com/%E4%BA%AC%E4%B8%9C%E9%80%89%E9%A1%B9%E5%8D%A1.png)
+![tab选项卡](http://oofwms1or.bkt.clouddn.com/%E4%BA%AC%E4%B8%9C%E9%80%89%E9%A1%B9%E5%8D%A1.png)
 
 格外使用一个div用来选定选项并通过`transform:translateX()`结合`transition: -webkit-transform .3s ease, -moz-transform .3s ease, transform .3s ease;`来进行滑动
 
-[jd-tab](http://oofwms1or.bkt.clouddn.com/jd-tab.png)
+![jd-tab](http://oofwms1or.bkt.clouddn.com/jd-tab.png)
 
 ```
 
