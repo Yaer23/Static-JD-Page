@@ -9,8 +9,8 @@ $(function () {
       index = $(this).index();
 
 
-    $menu_item.eq(index).css('background','#d9d9d9')
-    .siblings().css('background-color','#fff');
+    $menu_item.eq(index).css('background', '#d9d9d9')
+      .siblings().css('background-color', '#fff');
     $menu_panels.show();
     $menu_panel.eq(index).show()
       .siblings().hide();
@@ -24,6 +24,6 @@ $(function () {
     }
   }, function () {
     $menu_panels.hide();
-    $menu_item.css('background-color','#fff');
+    $menu_item.css('background-color', '#fff');
   })
 });
