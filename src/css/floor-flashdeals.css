@@ -1,0 +1,258 @@
+.flash-deals {
+  margin-bottom: 30px;
+  height: 275px;
+}
+
+.flash-deals .wrap {
+  margin: 0 auto;
+  width: 1190px;
+}
+
+.flash-deals .wrap .left {
+  position: relative;
+  float: left;
+  width: 190px;
+  height: 275px;
+  background-color: #e83632;
+  color: #fff;
+}
+
+/* left */
+
+.left a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.left .fd-title {
+  position: absolute;
+  top: 42px;
+  font-size: 34px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  left: 0;
+}
+
+.left .fd-subtitle {
+  position: absolute;
+  top: 90px;
+  font-size: 20px;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  left: 0;
+}
+
+.flash {
+  background-image: url('../images/floors/flash-deals/sprite-flash.png');
+  background-position: -35px -25px;
+  position: absolute;
+  left: 86px;
+  top: 126px;
+  display: block;
+  width: 20px;
+  height: 33px;
+}
+
+.left .fd-describe {
+  width: 100%;
+  position: absolute;
+  top: 170px;
+  left: 0;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+}
+
+.left .fd-deadline {
+  position: absolute;
+  top: 212px;
+  left: 30px;
+  height: 40px;
+}
+
+.dl-hour,
+.dl-minute,
+.dl-second {
+  width: 40px;
+  height: 40px;
+  background-color: #2f3430;
+  text-align: center;
+  margin-right: 5px;
+  float: left;
+  position: relative;
+}
+
+.dl-item::before {
+  display: block;
+  content: '';
+  height: 1px;
+  background-color: #e83632;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+}
+
+.dl-number {
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* center */
+
+.center {
+  float: left;
+  position: relative;
+  width: 799px;
+  border-right: 1px solid #f0f0f0;
+  height: 275px;
+  overflow: hidden;
+}
+
+.center-inner {
+  width: 4000px;
+  position: absolute;
+  height: 275px;
+}
+
+.goods-item {
+  width: 200px;
+  float: left;
+}
+
+.goods-item a {
+  height: 275px;
+  width: 199px;
+  display: block;
+  position: relative;
+  background-color: #fff;
+}
+
+.goods-item .goods-img {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  left: 50%;
+  margin-left: -70px;
+  top: 40px;
+}
+
+.goods-item .goods-desc {
+  position: absolute;
+  top: 190px;
+  left: 0;
+  width: 160px;
+  padding: 0 15px;
+  line-height: 30px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.goods-item .goods-price {
+  position: absolute;
+  top: 230px;
+  left: 15px;
+  width: 160px;
+  height: 20px;
+  padding: 1px;
+  background: #e6382f;
+  line-height: 20px;
+}
+
+.goods-price .discounted-price {
+  float: left;
+  width: 80px;
+  height: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.goods-price .original-price {
+  float: left;
+  width: 80px;
+  height: 20px;
+  background: #fff;
+  text-align: center;
+  color: #b7bcb8;
+  font-size: 12px;
+  text-decoration: line-through;
+}
+
+.fd-arrow {
+  position: absolute;
+  top: 110px;
+  width: 20px;
+  height: 40px;
+  line-height: 40px;
+  background-color: rgba(0, 0, 0, .15);
+  outline: none;
+  border: none;
+  text-align: center;
+  color: hsla(0, 0%, 100%, .5);
+  z-index: 10;
+}
+
+.fd-arrow-left {
+  left: 0;
+}
+
+.fd-arrow-right {
+  right: 0;
+}
+
+/* right */
+
+.right {
+  float: left;
+  width: 180px;
+  height: 260px;
+  padding: 8px 10px 7px 10px;
+  background-color: #fff;
+}
+
+.right-wrap {
+  overflow: hidden;
+  float: left;
+  width: 180px;
+  height: 260px;
+  position: relative;
+}
+
+.right-inner {
+  position: absolute;
+  width: 360px;
+  height: 260px;
+}
+
+.right-inner img {
+  float: left;
+  width: 180px;
+  height: 260px;
+}
+
+.fd-r-buttons {
+  position: absolute;
+  left: 43%;
+  bottom: 5px;
+  text-align: center;
+}
+
+.fd-r-button {
+  display: inline-block;
+  background: #c0c0c0;
+  width: 6px;
+  height: 6px;
+  margin: 4px; border-radius: 50%;
+}
+
+.fd-current-img {
+  background-color: #e33333;
+}
