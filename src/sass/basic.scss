@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 12px/1.5 Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif;
+  background: #EFF2EE;
+  color: #666;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+  &:hover {
+    color: #c81623;
+  }
+}
+
+.wrap {
+  margin: 0 auto;
+  width: 1190px;
+}
+
+img {
+  -webkit-transition: opacity ease .2s;
+  -o-transition: opacity ease .2s;
+  -moz-transition: opacity ease .2s;
+  transition: opacity ease .2s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+
