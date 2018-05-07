@@ -4,15 +4,15 @@
 
 ## 在线演示
 
-[仿京东首页-效果预览](https://yaer23.github.io/Static-JD-Page/src/index.html)
+[仿京东首页-效果预览](https://yaer23.github.io/Static-JD-Page/dist/index.html)
 
 ## 项目介绍
 
- - 使用gulp自动化构建工具，极大的便利了项目的开发，有良好的项目体验
+ - 使用gulp自动化构建工具，对文件进行合并压缩，对项目的实时刷新，极大的便利了项目的开发，有良好的项目体验
  - 使用sass预处理器对css样式进行编译，便利css的书写
  - 搜索框吸顶效果(添加annimate动画)
  - 商品分类面板（jQuery结合css实现了position:sticky效果）
- - swiper轮播图实现各个部分滑动轮播
+ - 轮播图实现各个部分滑动轮播
  - 对轮播图小圆点的样式制作
  - tab选项卡的切换效果
  - 图片及商品部分的懒加载(使用的是jQuery插件lazysizes.min.js)
@@ -20,7 +20,7 @@
 
 ## todolist
 
- - 做一些性能上的提升
+ - 做一些优化
 
 ## 项目细节部分
 
@@ -82,6 +82,14 @@ $(function () {
 [两种方式实现轮播图](https://github.com/Yaer23/Demo/blob/master/%E8%BD%AE%E6%92%AD%E5%9B%BE%E2%88%9A/%E8%BD%AE%E6%92%AD%E5%9B%BE.md)
 
 [滑动轮播Demo](https://yaer23.github.io/Demo/%E8%BD%AE%E6%92%AD%E5%9B%BE%E2%88%9A/%E6%BB%91%E5%8A%A8%E8%BD%AE%E6%92%AD.html)
+
+### 懒加载
+
+项目使用了lazysizes.min.js懒加载插件
+
+关于懒加载的一些小demo：
+[jQuery简单实现图片懒加载](https://blog.csdn.net/qq_35936643/article/details/79863372)
+[瀑布流+懒加载demo](https://yaer23.github.io/Demo/%E6%87%92%E5%8A%A0%E8%BD%BD/index.html)
 
 ### tab选项卡
 
@@ -272,4 +280,11 @@ gulp.task('watch', function () {
 
 ## 总结
 
-这次的项目主要是为了练习jQuery的使用，gulp构建工具的探索，sass的编写，以及js一些小的功能的实现。收获到了很多的知识与实战经验，从中体会到了很多乐趣。
+这次的项目主要是为了练习jQuery的使用，css布局，gulp构建工具的探索，sass的编写，以及js一些小的功能的实现。收获到了很多的知识与实战经验，从中体会到了很多乐趣。
+
+## how to run
+
+ - `git clone https://github.com/Yaer23/Static-JD-Page.git`
+ - `npm install`
+ - `gulp default`或`gulp` ( 对css、img、js等进行打包、压缩 )
+ - `gulp watch` ( 开启服务器监听文件变化 )

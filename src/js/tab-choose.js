@@ -17,7 +17,6 @@ $tab_item.hover(function () {
   }
 })
 
-
 // navigation-service-tab
 
 var $service_frame = $('.service_frame');
