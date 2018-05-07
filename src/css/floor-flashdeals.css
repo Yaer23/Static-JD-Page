@@ -17,15 +17,13 @@
   color: #fff;
 }
 
-/* left */
-
-.left a {
+.flash-deals .wrap .left a {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.left .fd-title {
+.flash-deals .wrap .left a .fd-title {
   position: absolute;
   top: 42px;
   font-size: 34px;
@@ -35,7 +33,7 @@
   left: 0;
 }
 
-.left .fd-subtitle {
+.flash-deals .wrap .left a .fd-subtitle {
   position: absolute;
   top: 90px;
   font-size: 20px;
@@ -45,8 +43,8 @@
   left: 0;
 }
 
-.flash {
-  background-image: url('../images/floors/flash-deals/sprite-flash.png');
+.flash-deals .wrap .left a .flash {
+  background-image: url("../images/sprite-flash.png");
   background-position: -35px -25px;
   position: absolute;
   left: 86px;
@@ -56,7 +54,7 @@
   height: 33px;
 }
 
-.left .fd-describe {
+.flash-deals .wrap .left a .fd-describe {
   width: 100%;
   position: absolute;
   top: 170px;
@@ -66,16 +64,16 @@
   color: #fff;
 }
 
-.left .fd-deadline {
+.flash-deals .wrap .left a .fd-deadline {
   position: absolute;
   top: 212px;
   left: 30px;
   height: 40px;
 }
 
-.dl-hour,
-.dl-minute,
-.dl-second {
+.flash-deals .wrap .left a .fd-deadline .dl-hour,
+.flash-deals .wrap .left a .fd-deadline .dl-minute,
+.flash-deals .wrap .left a .fd-deadline .dl-second {
   width: 40px;
   height: 40px;
   background-color: #2f3430;
@@ -85,7 +83,14 @@
   position: relative;
 }
 
-.dl-item::before {
+.flash-deals .wrap .left a .fd-deadline .dl-item .dl-number {
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.flash-deals .wrap .left a .fd-deadline .dl-item::before {
   display: block;
   content: '';
   height: 1px;
@@ -96,16 +101,7 @@
   width: 100%;
 }
 
-.dl-number {
-  font-size: 20px;
-  line-height: 40px;
-  font-weight: bold;
-  color: #fff;
-}
-
-/* center */
-
-.center {
+.flash-deals .wrap .center {
   float: left;
   position: relative;
   width: 799px;
@@ -114,18 +110,18 @@
   overflow: hidden;
 }
 
-.center-inner {
+.flash-deals .wrap .center .center-inner {
   width: 4000px;
   position: absolute;
   height: 275px;
 }
 
-.goods-item {
+.flash-deals .wrap .center .center-inner .goods-item {
   width: 200px;
   float: left;
 }
 
-.goods-item a {
+.flash-deals .wrap .center .center-inner .goods-item a {
   height: 275px;
   width: 199px;
   display: block;
@@ -133,7 +129,7 @@
   background-color: #fff;
 }
 
-.goods-item .goods-img {
+.flash-deals .wrap .center .center-inner .goods-item a .goods-img {
   width: 140px;
   height: 140px;
   position: absolute;
@@ -142,19 +138,20 @@
   top: 40px;
 }
 
-.goods-item .goods-desc {
+.flash-deals .wrap .center .center-inner .goods-item a .goods-desc {
   position: absolute;
   top: 190px;
   left: 0;
   width: 160px;
   padding: 0 15px;
   line-height: 30px;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.goods-item .goods-price {
+.flash-deals .wrap .center .center-inner .goods-item a .goods-price {
   position: absolute;
   top: 230px;
   left: 15px;
@@ -165,7 +162,7 @@
   line-height: 20px;
 }
 
-.goods-price .discounted-price {
+.flash-deals .wrap .center .center-inner .goods-item a .goods-price .discounted-price {
   float: left;
   width: 80px;
   height: 20px;
@@ -175,7 +172,7 @@
   font-weight: bold;
 }
 
-.goods-price .original-price {
+.flash-deals .wrap .center .center-inner .goods-item a .goods-price .original-price {
   float: left;
   width: 80px;
   height: 20px;
@@ -186,31 +183,29 @@
   text-decoration: line-through;
 }
 
-.fd-arrow {
+.flash-deals .wrap .center .fd-arrow {
   position: absolute;
   top: 110px;
   width: 20px;
   height: 40px;
   line-height: 40px;
-  background-color: rgba(0, 0, 0, .15);
+  background-color: rgba(0, 0, 0, 0.15);
   outline: none;
   border: none;
   text-align: center;
-  color: hsla(0, 0%, 100%, .5);
+  color: rgba(255, 255, 255, 0.5);
   z-index: 10;
 }
 
-.fd-arrow-left {
+.flash-deals .wrap .center .fd-arrow-left {
   left: 0;
 }
 
-.fd-arrow-right {
+.flash-deals .wrap .center .fd-arrow-right {
   right: 0;
 }
 
-/* right */
-
-.right {
+.flash-deals .wrap .right {
   float: left;
   width: 180px;
   height: 260px;
@@ -218,7 +213,7 @@
   background-color: #fff;
 }
 
-.right-wrap {
+.flash-deals .wrap .right .right-wrap {
   overflow: hidden;
   float: left;
   width: 180px;
@@ -226,33 +221,34 @@
   position: relative;
 }
 
-.right-inner {
+.flash-deals .wrap .right .right-wrap .right-inner {
   position: absolute;
   width: 360px;
   height: 260px;
 }
 
-.right-inner img {
+.flash-deals .wrap .right .right-wrap .right-inner img {
   float: left;
   width: 180px;
   height: 260px;
 }
 
-.fd-r-buttons {
+.flash-deals .wrap .right .right-wrap .fd-r-buttons {
   position: absolute;
   left: 43%;
   bottom: 5px;
   text-align: center;
 }
 
-.fd-r-button {
+.flash-deals .wrap .right .right-wrap .fd-r-buttons .fd-r-button {
   display: inline-block;
   background: #c0c0c0;
   width: 6px;
   height: 6px;
-  margin: 4px; border-radius: 50%;
+  margin: 4px;
+  border-radius: 50%;
 }
 
-.fd-current-img {
+.flash-deals .wrap .right .right-wrap .fd-r-buttons .fd-current-img {
   background-color: #e33333;
 }

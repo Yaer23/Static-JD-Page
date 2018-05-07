@@ -1,4 +1,5 @@
-.col_nav, .col_decoration, .col_nav {
+.col_nav,
+.col_decoration {
   z-index: 100;
 }
 
@@ -23,7 +24,8 @@
   bottom: 0px;
 }
 
-.nav_top_item, .nav_bottom_item {
+.nav_top_item,
+.nav_bottom_item {
   width: 35px;
   height: 35px;
   border-top-left-radius: 3px;
@@ -35,22 +37,8 @@
   cursor: pointer;
 }
 
-.nav_top_item .iconfont, .nav_bottom_item .iconfont {
-  width: 34px;
-  height: 35px;
-  margin-left: 1px;
-  position: absolute;
-  font-size: 20px;
-  top: 0px;
-  left: 0px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-  color: #fff;
-  font-weight: 100;
-  z-index: 101;
-}
-
-.nav_top_item span, .nav_bottom_item span {
+.nav_top_item span,
+.nav_bottom_item span {
   width: 62px;
   height: 35px;
   line-height: 35px;
@@ -63,7 +51,24 @@
   background-color: #7a6e6e;
   border-radius: 3px 0 0 3px;
   -webkit-transition: left .3s ease-in-out .1s;
+  -o-transition: left .3s ease-in-out .1s;
   transition: left .3s ease-in-out .1s;
+}
+
+.nav_top_item .iconfont,
+.nav_bottom_item .iconfont {
+  width: 34px;
+  height: 35px;
+  margin-left: 1px;
+  position: absolute;
+  font-size: 20px;
+  top: 0px;
+  left: 0px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  color: #fff;
+  font-weight: 100;
+  z-index: 101;
 }
 
 .reward {

@@ -1,6 +1,6 @@
 # 仿京东首页
 
-仿站实践-练习css布局，jQuery使用
+仿站实践-练习css布局，jQuery使用，gulp构建工具，sass学习与运用
 
 ## 在线演示
 
@@ -8,6 +8,8 @@
 
 ## 项目介绍
 
+ - 使用gulp自动化构建工具，极大的便利了项目的开发，有良好的项目体验
+ - 使用sass预处理器对css样式进行编译，便利css的书写
  - 搜索框吸顶效果(添加annimate动画)
  - 商品分类面板（jQuery结合css实现了position:sticky效果）
  - swiper轮播图实现各个部分滑动轮播
@@ -18,10 +20,9 @@
 
 ## todolist
 
- - sass改写css样式
  - 做一些性能上的提升
 
-## 项目细节部分总结
+## 项目细节部分
 
 ### CSS Sprites和iconfont
 
@@ -143,7 +144,6 @@ $tab_item.hover(function () {
 
 方法：使用伪元素实现里面的小圆点
 
-
 #### 劵的实现
 
 依然是用伪元素对优惠券进行'打孔'
@@ -169,8 +169,6 @@ $tab_item.hover(function () {
 }
 ```
 
-
-
 ### 文本处理
 
 #### white-space
@@ -187,3 +185,91 @@ text-overflow 属性规定当文本溢出包含元素时发生的事情。
 
 overflow 属性规定对溢出元素框的内容的处理。
 `overflow:hidden` 溢出部分隐藏
+
+### gulp的使用
+
+使用过程中主要利用一下优点：
+
+ - 编译sass
+ - 合并压缩文件（css、js、img）
+ - 实时自动刷新
+
+```
+var gulp = require('gulp'),   //引入gulp插件
+  sass = require('gulp-sass'),  //  sass文件的编译
+  imagemin = require('gulp-imagemin'),  //图片的压缩
+  autoprefixer = require('gulp-autoprefixer'),  //处理css浏览器前缀
+  jshint = require('gulp-jshint'),  // js语法校验
+  cssnano = require('gulp-cssnano'),  //css文件的压缩
+  concat = require('gulp-concat'),  //文件合并
+  cached = require('gulp-cached'),  //缓存当前任务中的文件，只让已修改的文件通过管道
+  uglify = require('gulp-uglify'),  //js压缩
+  browerSync = require('browser-sync'); //自动刷新
+
+//scss文件的处理 （编译、合并、压缩）
+gulp.task('sass-merge', function () {
+  return gulp.src('src/sass/*.scss')
+    // .pipe(cached('sass-merge'))
+    .pipe(sass()) //将scss文件编译成css
+    .pipe(autoprefixer('last 5 version')) //自动处理css浏览器前缀
+    .pipe(concat('merge.css'))  // 合并管道中的css文件并命名为merge.css
+    .pipe(cssnano())  //压缩管道中的文件
+    .pipe(gulp.dest('dist/css/')) // 输出文件到指定目录dist/css/下
+});
+
+//调试阶段sass文件处理为css文件
+gulp.task('sass-css', function () {
+  return gulp.src('src/sass/*.scss')
+    // .pipe(cached('sass-css'))
+    .pipe(sass({outputStyle: 'expanded'}))  // 对sass/目录下的.scss结尾的文件进行编译成css文件
+    .pipe(autoprefixer('last 5 version'))   // 自动处理css中的浏览器前缀
+    .pipe(gulp.dest('src/css/'))  //  输出文件到src/css/目录中
+});
+
+//js文件的处理
+gulp.task('scripts', function() {
+  return gulp.src('src/js/*.js')
+    // .pipe(cached('scripts'))
+    .pipe(jshint()) //js校验
+    .pipe(concat('main.js'))  //合并js文件命名为main.js
+    .pipe(uglify()) //js文件进行压缩
+    .pipe(gulp.dest('dist/js/'))  //输出文件到dist/js/下
+});
+
+//图片的处理
+gulp.task('images', function() {
+  return gulp.src('src/images/*') //匹配需要的图片
+    // .pipe(cached())
+    .pipe(imagemin({optimizationLevel: 3, progressive: true, interlaced: true, multipass: true})) //以规定格式进行图片压缩
+    .pipe(gulp.dest('dist/images')) //输出文件
+});
+
+//设置默认gulp task
+gulp.task('default',function() {  
+  gulp.start('sass-merge','scripts','images'); //执行sass-merge，scripts, images这三个task
+});
+
+// 开启监听
+gulp.task('watch', function () {
+  // 启动刷新服务
+  browerSync.init({
+    server: {
+      baseDir: 'dist'
+    }
+  });
+
+  // 监听scss文件，当scss文件更新，执行sass-merge,sass-css这两个task
+  gulp.watch('src/sass/*.scss',['sass-merge','sass-css']);
+  // 监听js文件，当js文件更新,执行scipts 这个task任务
+  gulp.watch('src/js/*.js',['scripts']);
+  // 监听images文件，当images更新，执行images这个task
+  gulp.watch('src/images/*', ['images']);
+  // 只要dist目录下的文件更新，自动刷新页面
+  gulp.watch(['dist/**/*']).on('change',browerSync.reload);
+
+});
+```
+
+## 总结
+
+这次的项目主要是为了练习jQuery的使用，gulp构建工具的探索，sass的编写，以及js一些小的功能的实现。收获到了很多的知识与实战经验，从中体会到了很多乐趣。

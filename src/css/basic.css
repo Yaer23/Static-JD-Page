@@ -14,6 +14,10 @@ i {
   font-style: normal;
 }
 
+ul li {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
   color: #666;
@@ -21,10 +25,6 @@ a {
 
 a:hover {
   color: #c81623;
-}
-
-ul li {
-  list-style: none;
 }
 
 .wrap {
@@ -35,7 +35,6 @@ ul li {
 img {
   -webkit-transition: opacity ease .2s;
   -o-transition: opacity ease .2s;
-  -moz-transition: opacity ease .2s;
   transition: opacity ease .2s;
 }
 
